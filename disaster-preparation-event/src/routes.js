@@ -1,9 +1,17 @@
 import React from 'react';
-import { BrowserRouter as Router, Route } from 'react-router-dom'
-import App from './components/App'
+import { Route } from 'react-router-dom'
+import { ConnectedRouter as Router } from 'react-router-redux'
+import App from './containers/App'
+import Blank from './components/Blank'
+import Default from './components/Default'
 
-export default (
-    <Router>
-        <Route path="/app" component={App}></Route>
+export default function createRoutes(store, history){
+    return ( 
+    <Router history={history}>
+        <App>
+            <Route exact path="/" component={Default}></Route>
+            <Route path="/blank" component={Blank}></Route>
+        </App>
     </Router>
-);
+    );
+};
