@@ -31,6 +31,15 @@ class MapComponent extends Component {
                     defaultCenter={this.state.center}
                     defaultZoom={this.state.zoom}>
 
+                    <EarthquakeCircle
+                        key={1}
+                        lat={45.492836}
+                        lng={-122.811386} />
+
+                    <EarthquakeCircle
+                        key={1}
+                        lat={48.492836}
+                        lng={-128.811386} />
 
 
                 </GoogleMapReact>

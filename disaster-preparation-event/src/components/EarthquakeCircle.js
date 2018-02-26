@@ -41,7 +41,7 @@ class EarthquakeCircle extends Component{
     render(){
     return (<Circle>
         <InnerCircle color="red"/>
-        <InnerCircle color="blue"/>
+        <InnerCircle color="red"/>
       </Circle>
     )};
 }
