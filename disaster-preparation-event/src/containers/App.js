@@ -1,4 +1,10 @@
-import { Component } from 'react'
+import React, { Component } from 'react'
+import styled from 'styled-components'
+
+const Body = styled.div`
+    min-height: 100%;
+    min-width: 100%;
+`
 
 export default class App extends Component{
     constructor(props){
@@ -7,7 +13,9 @@ export default class App extends Component{
 
     render(){
         return (
-            this.props.children
+            <Body>
+                {this.props.children}
+            </Body>
         );
     }
 }
